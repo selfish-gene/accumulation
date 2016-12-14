@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册界面</title>
+    <link rel="stylesheet" href="../css/reg.css" media="screen" title="no title" >
+</head>
+
+<body>
+
+    <div class="container">
+        <form class=""  method="post" action="../jsp/regSuccess.jsp">
+            <div class="name"><span>姓名：</span>
+                <input type="text" name="name" id="" required placeholder="请输入姓名">
+            </div>
+            <div class="age"><span>年龄：</span>
+                <input type="number" name="age" id="" min="0" required placeholder="请输入年龄">
+            </div>
+            <div class="userName"><span>用户名：</span>
+                <input type="text" name="userName" id="" required placeholder="请输入用户名">
+            </div>
+            <div class="password"><span>密码：</span>
+                <input type="password" name="password" id="" required placeholder="请输入密码">
+            </div>
+            <div class="hobbit"><span>习惯于：</span>
+                <input type="checkbox" name="hobbit" value="1">学习
+                <input type="checkbox" name="hobbit" value="2">旅游
+                <input type="checkbox" name="hobbit" value="3">工作
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" value="true"><span>请记住我</span></div>
+            <div lang="">
+                <!-- <input type="button" value="注册"> -->
+                <button type="submit" class="btn btn-default">注册</button>
+            </div>
+            <input type="hidden" name="regFrom" value="1">
+        </form>
+    </div>
+
+</body>
+
+</html>
