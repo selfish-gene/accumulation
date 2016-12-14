@@ -1,0 +1,12 @@
+body{
+  background-color: #eee;
+}
+
+.container {
+    margin: 100px auto;
+    text-align: center;
+    background-color: #eee;
+}
+div{
+  margin-top: 20px;
+}
