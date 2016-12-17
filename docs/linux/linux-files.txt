@@ -1,0 +1,23 @@
+
+
+    /etc/profile                                        设置环境变量的文件
+cat /etc/system-release                                 查看当前系统的版本
+cat /etc/sysconfig/network-scripts/ifcfg-eno16777736    查看当前网关信息
+
+ •/ 根目录
+ •/bin 命令保存目录（普通用户权限）
+ •/sbin 命令保存目录（root权限）
+ •/boot 启动目录，包含启动相关文件，和开机有关
+ •/dev 设备文件保存目录
+ •/etc 配置文件保存目录
+ •/home 普通用户家目录
+ •/lib 系统库保存目录
+ •/mnt 系统挂载目录
+ •/media 挂载目录（常用于光盘挂载）
+ •/root 超级用户家目录
+ •/tmp 临时目录
+ •/proc 直接写入内存的
+ •/sys 直接写入内存的
+ •/usr 系统软件资源目录
+ •/var 系统相关文档内容
+ 

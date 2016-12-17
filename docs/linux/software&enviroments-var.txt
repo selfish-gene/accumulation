@@ -1,0 +1,10 @@
+#CentOS Linux release 7.3.1611 (Core)
+
+安装软件或命令：yum install 软件或者命令
+// TODO 完善软件和环境变量的安装
+java
+git
+bazel
+maven
+tomcat
+

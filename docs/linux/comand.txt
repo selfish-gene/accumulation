@@ -1,0 +1,55 @@
+参考链接列表：
+    Linux命令基本格式及目录处理命令：http://www.cnblogs.com/hlwyfeng/p/6058274.html
+
+工具
+    date  日期
+    cal   日历
+    bc    计算器
+
+基本命令
+
+    cd /                        根目录
+    cd -                        上次的目录
+    cd ~                        当前用户目录
+    cp src dest                 将srcs文件或目录复制到dest目录
+    chmod +x shell脚本          给脚本加权限
+    chmod +x */*.sh             给当前路径下及其子目录下的shell脚本加权限
+    echo $JAVA_HOME             输出java所在路径
+    find / -name 关键字         指定查询关键字
+    ip addr                     查看ip
+    ipconfig                    没有该命令的话需要安装
+    kill -5
+    kill -9 进程号              强制停止进程
+    ll                          罗列目录下的文件
+    ls
+    ls -a                       罗列目录下的文件（包含隐藏文件）
+    mkdir 目录名                创建目录
+    mv src dest                 将srcs文件或目录剪切到dest目录
+    ping ip地址                 看能否连同某个机子
+    ps aux | grep 关键字        查看进程
+    pwd                         当前目录
+    rm 文件                     删除文件
+    rm -rf  文件或目录          强制删除文件或目录
+    su 用户名                   切换到该用户
+    tar zxvf *.tar.gz           解压
+    tar cxvf 目标文件           打包
+    touch 文件名                创建文件
+    whereis 软件名(要小写)      查看软件的安装路径
+    which 软件名(要小写)        查看软件的环境变量安装路径
+
+在解决dash问题是使用的命令：
+
+    curl -I -L http://10.67.134.158
+    -Dhttp.proxyHost=10.175.102.188
+    -Dhttp.proxyPort=3129
+    sh -x bazel-bin/dash
+    telnet
+    wget
+
+
+
+
+
+
+
+
