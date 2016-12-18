@@ -1,0 +1,62 @@
+
+#Problems encountered when using bazel
+1. 资源文件加载空指针问题
+    已解决，但应该还有其他方案，可以参考bazel乘工程》example》java》native中是如何取依赖的
+2. 关于WORKSPACE中依赖maven_jar的问题
+    (1).依赖冲突问题，例如
+        org_elasticsearch的问题，通过http_jar的规则来解决
+    (2).maven依赖有classfiler、type的maven_jar中的artifact属性要拼接  :jar
+3. 如何自定义打jar包的路径（输出目录），自定义之后如何恢复呢？
+    http://www.bazel.io/versions/master/docs/output_directories.html
+    bazel --output_user_root=/tmp/bazel build inforsight-core/...
+4. 打jar包执行普通的命令，bazel build并没有把target所依赖的文件也打包进来，
+   这样该文件只能在本地执行，在其他环境则不能执行，应该如何处理？
+5. 关于bazel构建scala的规则遇到的问题
+    修改scala.bzl文件中的依赖scala-sdk的url即可
+6. 关于dash的问题
+    (1).解决依赖appengine的问题
+    (2).解决连不上外网的问题 //TODO 这个完全没有理解，虽然说解决了
+7. idea bazel插件的问题
+
+#Worth thinking about
+1. 如何在test包下的BUILD文件中只写入几个规则即可跑通所有的测试类？
+2. 如何识别shell脚本是否使用sh_test?还有shell脚本是否依赖于其他文件
+
+#Fuzzy points of knowledge
+  java_library中的属性resources的作用？
+  genrule怎么使用？
+  --deleted_packages如何使用？
+  data与deps的区别是什么？
+  test_suite到底如何使用？
+  *_binary与*_library到底如何区分？目前的理解是*_binary指向的是单个的目标，并且把目标构建为二进制文件，*_library是多个目标
+  file_group如何使用会更加灵活一些？
+  glob到底如何灵活使用？
+  export_file的作用是什么？
+  new_http_archive与http_archive的区别于联系，同样还有local_repository与new_local_repository
+  *.proto文件可以直接作为target吗？
+  java_import的作用，还有export属性的具体作用。
+  load规则的具体作用
+
+#Use tips
+1.只能在workspace目录及其子目录下才能执行bazel的命令
+2.在开始前先要用bazel info查看当前信息
+3.在build之前要先用bazel fetch来查看外部依赖是否正确（注意：这个命令只检测已经添加的依赖是否正确，不会检测缺失的依赖）
+
+#Bazel commands
+basic commands:
+    bazel help
+    bazel info
+    bazel fetch
+    bazel build
+    bazel query
+    bazel test
+    bazel run
+    bazel clean
+commands patterns:
+    bazel clean --expunge
+    bazel build ...
+    bazel build inforsight-core/... inforsight-search/...
+    bazel build -- inforsight-core/... -inforsight-core/src/test...
+    bazel query -- output=label_kind //path/to/targets | sort
+every command option:
+    http://www.bazel.io/versions/master/docs/command-line-reference.html

@@ -5,21 +5,22 @@
     ·如何使用？
 一、安装
 二、构建工程(以java工程为例)
-    1.概念：WORKSPACE、BUILD、target
-    2.构建模式：
-    3.输出目录：
-三、标签规则、函数、属性
+    1.概念：WORKSPACE、Packages 、Targets
+    2.构建模式
+    3.标签规则、函数、属性
+    4.外部依赖
+    5.输出目录
 四、基本命令与命令模式
     1.常用的基本命令
     2.命令模式语法
-五、支持语言(更多请参考官方网址：http://www.bazel.io/versions/master/docs/be/overview.html)
+六、支持语言(更多请参考官方网址：http://www.bazel.io/versions/master/docs/be/overview.html)
     1.java
     2.shell
     3.scala
-六、使用注意事项及一些小技巧
-七、问题及方案
+七、使用注意事项及一些小技巧
+八、问题及方案
     1.遇到的问题及解决方案
     2.待解决问题
-八、拓展
+九、拓展
     1.可视化工具dash
     2.IntelliJ with Bazel 插件
