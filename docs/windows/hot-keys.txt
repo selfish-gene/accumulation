@@ -1,0 +1,11 @@
+
+F11                     最大化最小化
+ctrl W                  关闭当前窗口
+ctrl F                  定位到搜索框
+ctrl Home/End           定位到头部或尾部
+ctrl shift N            新建文件夹
+shift 右键              在此打开cmd命令窗口
+Win D                   切换到桌面
+Win E                   打开资源管理器
+Win L                   锁定当前用户
+Win R                   打开”运行“对话框
