@@ -1,0 +1,10 @@
+
+// TODO package与install的区别是什么？
+clean           清除已编译好的资源和class文件
+compile         编译成class文件
+package         打包web工程》war包，普通java工程》jar包
+install         打包到本地仓库
+deploy
+
+mvn clean install -Dmaven.test.skip=true    编译时跳过测试类
+mvn project-info-reports:dependencies       生成依赖关系的网页
