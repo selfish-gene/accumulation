@@ -1,0 +1,11 @@
+
+
+ctrl F4                 关闭当前
+ctrl D                  复制行
+ctrl N                  全局查找类
+ctrl X                  删除行或选中内容
+ctrl shift F            全局查找文本
+ctrl shift N            全局查找文件
+ctrl shift U
+ctrl shift UP/DOWN      上下移动行
+
