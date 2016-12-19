@@ -1,4 +1,4 @@
-package com.my.test;
+package com.my.io;
 
 public class Person {
 	
