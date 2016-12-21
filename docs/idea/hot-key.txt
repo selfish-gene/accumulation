@@ -2,8 +2,13 @@
 
 ctrl F4                 关闭当前
 ctrl D                  复制行
+ctrl F                  查找
 ctrl N                  全局查找类
+ctrl Q                  查看方法说明
+ctrl R                  查找并替换
 ctrl X                  删除行或选中内容
+ctrl alt M              重构方法
+ctrl alt T              包围代码块
 ctrl shift F            全局查找文本
 ctrl shift N            全局查找文件
 ctrl shift U
