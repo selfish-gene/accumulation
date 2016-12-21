@@ -31,9 +31,7 @@ public class FileCopy {
 		if (desDir.isDirectory() && desDir.listFiles().length != 0) {
 			throw new RuntimeException("The desDir must be null ! ");
 		}
-
 		copyDirectoryRecursive(srcDir, desDir);
-
 	}
 
 	/**
@@ -54,9 +52,7 @@ public class FileCopy {
 			} else if (file.isDirectory()) {
 				copyDirectoryRecursive(file, new File(path));
 			}
-
 		}
-
 	}
 
 	public static void copySingleFile(File srcDir, File desDir) {
