@@ -11,9 +11,11 @@ ctrl R                  查找并替换
 ctrl X                  删除行或选中内容
 ctrl alt L              格式化代码
 ctrl alt M              重构方法
+ctrl alt O              优化导入的包
 ctrl alt T              包围代码块
 ctrl shift F            全局查找文本
 ctrl shift N            全局查找文件
 ctrl shift U
+ctrl shift Z            恢复操作
 ctrl shift UP/DOWN      上下移动行
 
