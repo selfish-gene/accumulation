@@ -1,6 +1,7 @@
 
 double shift            查找最近打开的文件
 
+alt insert              getter and setter
 ctrl F4                 关闭当前
 ctrl D                  复制行
 ctrl F                  查找
