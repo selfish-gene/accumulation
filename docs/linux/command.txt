@@ -36,6 +36,10 @@
     touch 文件名                创建文件
     whereis 软件名(要小写)      查看软件的安装路径
     which 软件名(要小写)        查看软件的环境变量安装路径
+    cat /etc/system-release                                 查看当前系统的版本
+    cat /etc/sysconfig/network-scripts/ifcfg-eno16777736    查看当前网关信息
+    uname -a                    查看linux内核版本
+    uname -r
 
 在解决dash问题是使用的命令：
 
