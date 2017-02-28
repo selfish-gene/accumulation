@@ -28,6 +28,12 @@ public class Log4j2 {
 
     }
 
+    /**
+     * 自定义Log4j2.xml所在位置
+     * @param logger4j2Path Log4j2.xml所在位置
+     * @param loggerName 获取的日志对象
+     * @return 目标日志对象
+     */
     public Logger getLogger(String logger4j2Path, String loggerName){
         File file = new File(logger4j2Path);
         if(file == null){
