@@ -25,7 +25,8 @@ public class Fastjson {
         Map<String, Object> map = new HashMap<>();
         map.put("key1", 1);
         map.put("key2", 2);
-        String mapJson = JSON.toJSONString(map, SerializerFeature.WriteClassName);
+        map.put("key3", null);
+        String mapJson = JSON.toJSONString(map, SerializerFeature.WriteClassName, SerializerFeature.WriteMapNullValue);
         System.out.println(mapJson);
         LOGGER.info("Transform json to map ...");
         // json to map
