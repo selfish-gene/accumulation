@@ -1,0 +1,30 @@
+{
+  "name":[{
+    "type" : "required",
+    "value" : "true"
+  },{
+    "type" : "regex",
+    "value" : "^[A-Za-z0-9]+$",
+    "message" : " Only English letters and numbers allowed "
+  },{
+    "type" : "minlength",
+    "value" : "4"
+  },{
+    "type" : "maxlength",
+    "value" : "16"
+  }],
+  "age":[{
+    "type" : "required",
+    "value" : "false"
+  },{
+    "type" : "number",
+    "value" : "integer"
+  },{
+    "type" : "min",
+    "value" : "0"
+  },{
+    "type" : "max",
+    "value" : "160"
+  }]
+
+}

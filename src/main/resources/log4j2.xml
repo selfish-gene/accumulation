@@ -7,7 +7,7 @@
     </properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%highlight{%d [%t] %-5level: %msg%n%throwable}{FATAL=Bright red, ERROR=red, WARN=Bright Yellow, INFO=Green, DEBUG=Cyan, TRACE=Black}" />
+            <PatternLayout pattern="%highlight{%d [%t] %l %-5level: %msg%n%throwable}{FATAL=Bright red, ERROR=red, WARN=Bright Yellow, INFO=Green, DEBUG=Cyan, TRACE=Black}" />
         </Console>
         <File name="fileLog" fileName="D://logs/file.log">
             <PatternLayout pattern="%highlight{%d [%t] %-5level: %msg%n%throwable}{FATAL=Bright red, ERROR=red, WARN=Bright Yellow, INFO=Green, DEBUG=Cyan, TRACE=Black}" />
@@ -34,7 +34,7 @@
             <AppenderRef ref="roll_random" />
         </Logger>
 
-        <Root level="error">
+        <Root level="info">
             <AppenderRef ref="Console" />
         </Root>
     </Loggers>

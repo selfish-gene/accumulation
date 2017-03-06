@@ -40,11 +40,17 @@ public class FormValidator {
     private static final String REGEX = "regex";
 
     /**
+     *  A util class should not have a public or a default construct
+     */
+    private FormValidator(){
+    }
+
+    /**
      * 获取校验配置
      * @param fileName json文件名
      * @return 存储json配置的Map
      */
-    public Map<String, Object> getFormValidator(String fileName){
+    public  static Map<String, Object> getFormValidator(String fileName){
         String path = FormValidator.class.getResource("/").getPath() + "/validator/" + fileName + ".json";
         File file = new File(path);
         if(file == null){
@@ -79,8 +85,13 @@ public class FormValidator {
         return jsonObject;
     }
 
-    // 验证表单
-    public boolean validateForm(Map<String, Object> form, String fileName){
+    /**
+     * 校验表单
+     * @param form  表单对象
+     * @param fileName 校验配置，json文件
+     * @return 校验结果，true，校验成功，false，校验失败
+     */
+    public static boolean validateForm(Map<String, Object> form, String fileName){
         // 如果表单为空无需校验
         if(form == null){
             LOGGER.info("form is null");
@@ -97,18 +108,24 @@ public class FormValidator {
             // 获取对应key的校验配置
             List<Map<String, Object>> validatorList = (List<Map<String, Object>>) validatorMap.get(key);
             // 开始校验
-            if(validateParam(value, validatorList)){
+            LOGGER.info("start validate key :" + key + ", value :" + value);
+            if(!validateParam(value, validatorList)){
                 LOGGER.error("validate failed");
                 return false;
             } else {
-                LOGGER.error("validate success");
+                LOGGER.info("validate success");
             }
         }
         return true;
     }
 
-    // 验证单个参数
-    private boolean validateParam(Object value, List<Map<String, Object>> validatorList) {
+    /**
+     * 校验单个参数
+     * @param value 校验的值
+     * @param validatorList 改值对象的校验配置
+     * @return 校验结果，true，校验成功，false，校验失败
+     */
+    public static boolean validateParam(Object value, List<Map<String, Object>> validatorList) {
         Map<String, Object> validator;
         String type;
         for (Map<String, Object> map: validatorList) {
