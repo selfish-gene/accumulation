@@ -1,4 +1,4 @@
-package com.selfish.gene.log4j;
+package com.selfish.gene.third.party.log4j;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
