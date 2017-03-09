@@ -10,6 +10,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -39,7 +40,7 @@ public class TestAll {
         System.out.println(epochMilli);
 
         Date date = new Date(epochMilli);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
         String format = simpleDateFormat.format(date);
         System.out.println(format);
     }
