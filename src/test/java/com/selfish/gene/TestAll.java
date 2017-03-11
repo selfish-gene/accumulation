@@ -8,14 +8,10 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 /**
  * Created by Administrator on 2017/3/8.
@@ -47,7 +43,9 @@ public class TestAll {
 
     @Test
     public void B() throws Exception {
-
+       String a =  "test";
+       String b =  "test";
+        System.out.println(a.equals(b));
     }
 
     @Test
