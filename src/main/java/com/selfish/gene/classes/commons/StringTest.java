@@ -1,4 +1,4 @@
-package com.selfish.gene.string;
+package com.selfish.gene.classes.commons;
 
 import static org.hamcrest.Matchers.*;
 import org.junit.Assert;

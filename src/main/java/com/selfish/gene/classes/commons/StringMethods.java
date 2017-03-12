@@ -1,4 +1,4 @@
-package com.selfish.gene.string;
+package com.selfish.gene.classes.commons;
 
 public class StringMethods {
 

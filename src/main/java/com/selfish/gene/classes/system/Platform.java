@@ -1,4 +1,4 @@
-package com.selfish.gene.system;
+package com.selfish.gene.classes.system;
 
 public enum Platform {
 	Any("any"),
