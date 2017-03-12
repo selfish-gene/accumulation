@@ -1,4 +1,4 @@
-package com.selfish.gene.collection.map.collections;
+package com.selfish.gene.collection.collections;
 
 import java.util.*;
 

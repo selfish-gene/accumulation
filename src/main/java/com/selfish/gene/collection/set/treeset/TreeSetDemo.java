@@ -1,4 +1,4 @@
-package com.selfish.gene.collection.set;
+package com.selfish.gene.collection.set.treeset;
 
 import java.util.TreeSet;
 
