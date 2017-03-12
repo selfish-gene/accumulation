@@ -43,9 +43,10 @@ public class TestAll {
 
     @Test
     public void B() throws Exception {
-       String a =  "test";
-       String b =  "test";
-        System.out.println(a.equals(b));
+        String s = "July 5 08:34:24 2016";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d HH:mm:ss yyyy");
+        LocalDateTime l = LocalDateTime.parse(s, formatter);
+        System.out.println(l.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
     }
 
     @Test
