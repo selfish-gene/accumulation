@@ -1,4 +1,4 @@
-package com.selfish.gene.modles;
+package com.selfish.gene.models;
 
 /**
  * Created by Administrator on 2017/2/28.
