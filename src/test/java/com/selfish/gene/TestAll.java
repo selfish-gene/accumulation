@@ -1,9 +1,11 @@
 package com.selfish.gene;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -43,10 +45,13 @@ public class TestAll {
 
     @Test
     public void B() throws Exception {
-        String s = "July 5 08:34:24 2016";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d HH:mm:ss yyyy");
-        LocalDateTime l = LocalDateTime.parse(s, formatter);
-        System.out.println(l.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        String path = "C:\\Users\\Administrator\\Documents\\My Hwdoc Files\\HWPDFOCR80\\IMAGE\\疯狂Java讲义  第3版 PDF电子书下载 带书签目录 完整版";
+        File file = new File(path);
+        File[] files = file.listFiles(pathname -> pathname.isDirectory() || pathname.getName().endsWith(".TXT"));
+        if(files != null){
+//            Arrays.stream(files).forEach(f -> f.delete());
+            Arrays.stream(files).forEach(f -> f.renameTo(new File(path + File.separator + f.getName().substring(f.getName().indexOf("_") + 1).replace(".PDF", ""))));
+        }
     }
 
     @Test
