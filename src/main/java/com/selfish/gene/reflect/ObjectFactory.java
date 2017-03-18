@@ -8,10 +8,10 @@ import java.util.Date;
  */
 public class ObjectFactory {
     public static void main(String[] args) {
-        // 不使用泛型，获取实例后需要强制转换，随便编译期没报错，但运行期会报错
+        // 不使用泛型，获取实例后需要强制转换，编译期没报错，但运行期会报错
         Date date = (Date) getInstance("java.util.Date");
 //        JFrame jFrame = (JFrame) getInstance("java.util.Date");
-
+        // 获取实例后无须类型转换
         Date date2 = getInstance2(Date.class);
         JFrame jFrame2= getInstance2(JFrame.class);
 
