@@ -1,11 +1,14 @@
 package com.selfish.gene;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.tools.zip.ZipEntry;
+import org.apache.tools.zip.ZipOutputStream;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -31,27 +34,60 @@ public class TestAll {
 
     @Test
     public void A() throws Exception {
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println(localDateTime);
-        LocalDateTime parse = LocalDateTime.parse("11 4 07:48:34 2016", DateTimeFormatter.ofPattern("MM d HH:mm:ss yyyy"));
-        long epochMilli = parse.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        System.out.println(epochMilli);
+        String a = "D:\\down\\a";
+        File aFile = new File(a);
+//        String b = "D:\\down\\b\\e.txt";
+        String b = "D:\\down\\b";
+        File bFile = new File(b);
+        String c = "D:\\logs\\file.log";
+//        String c = "D:\\logs";
+        File cFile = new File(c);
+        String zip = "D:\\down\\a\\a.zip";
 
-        Date date = new Date(epochMilli);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
-        String format = simpleDateFormat.format(date);
-        System.out.println(format);
+        List<File> srcFiles = new ArrayList<>();
+        srcFiles.add(aFile);
+        srcFiles.add(bFile);
+        srcFiles.add(cFile);
+
+        ZipOutputStream  zos;
+//        BufferedInputStream bis = null;
+        zos = new ZipOutputStream(new FileOutputStream(zip));
+
+        for (File file : srcFiles) {
+            if (file.isDirectory()){
+                File[] files = file.listFiles();
+                if (files != null) {
+                    for (File f: files) {
+                        String entryName = "a" + File.separator + f.getName();
+                        write(zos, f, entryName);
+                    }
+                }
+            }
+            else
+            {
+                String entryName = "ca/" + File.separator + file.getName();
+                write(zos, file, entryName);
+            }
+        }
+        IOUtils.closeQuietly(zos);
+    }
+
+    private void write(ZipOutputStream zos, File f, String entryName) throws IOException {
+        BufferedInputStream bis;
+        bis = new BufferedInputStream(new FileInputStream(f));
+        zos.putNextEntry(new ZipEntry(entryName));
+        byte[] bytes = new byte[1024];
+        while(bis.read() != -1){
+            zos.write(bytes);
+        }
+        IOUtils.closeQuietly(bis);
     }
 
     @Test
     public void B() throws Exception {
-        String path = "C:\\Users\\Administrator\\Documents\\My Hwdoc Files\\HWPDFOCR80\\IMAGE\\疯狂Java讲义  第3版 PDF电子书下载 带书签目录 完整版";
-        File file = new File(path);
-        File[] files = file.listFiles(pathname -> pathname.isDirectory() || pathname.getName().endsWith(".TXT"));
-        if(files != null){
-//            Arrays.stream(files).forEach(f -> f.delete());
-            Arrays.stream(files).forEach(f -> f.renameTo(new File(path + File.separator + f.getName().substring(f.getName().indexOf("_") + 1).replace(".PDF", ""))));
-        }
+        File file = new File("D:\\down\\b\\e.txt");
+        assertThat(file.getName(), is("e.txt"));
+        assertThat(file.getParentFile().getName(), is("b"));
     }
 
     @Test
