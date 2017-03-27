@@ -1,6 +1,7 @@
 package com.selfish.gene;
 
-import org.apache.commons.io.FileUtils;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 import org.apache.commons.io.IOUtils;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipOutputStream;
@@ -9,14 +10,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created by Administrator on 2017/3/8.
@@ -90,8 +90,28 @@ public class TestAll {
         assertThat(file.getParentFile().getName(), is("b"));
     }
 
+    // count测试
     @Test
     public void C() throws Exception {
+        String s = "abtsbfacsaadfcd";
+        char[] chars = s.toCharArray();
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : chars) {
+            // 每回都需要把count初始化为1
+            int count = 1;
+            if(map.containsKey(c)){
+                count = map.get(c) + 1;
+            }
+            map.put(c, count);
+        }
+        System.out.println(map);
 
+        List<Character> list = new ArrayList<>();
+        for (char c: chars) {
+            list.add(c);
+        }
+        Multiset<Character> multiset = HashMultiset.create();
+        multiset.addAll(list);
+        multiset.elementSet().stream().forEach(c ->  System.out.println(c + " = " + multiset.count(c)));
     }
 }
