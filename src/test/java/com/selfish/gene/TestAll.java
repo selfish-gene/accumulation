@@ -2,6 +2,8 @@ package com.selfish.gene;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
+import com.selfish.gene.thread.synchronized_.Account;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipOutputStream;
@@ -10,10 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -85,9 +84,9 @@ public class TestAll {
 
     @Test
     public void B() throws Exception {
-        File file = new File("D:\\down\\b\\e.txt");
-        assertThat(file.getName(), is("e.txt"));
-        assertThat(file.getParentFile().getName(), is("b"));
+        Account account1 = new Account("a",123);
+        Account account2 = new Account("b",689);
+        System.out.println(account1.equals(account2));
     }
 
     // count测试
