@@ -100,6 +100,12 @@ background color		设置代码背景颜色
 
 ![code_style](D:\git\accumulation\gene-docs\eclipse\pictures\code_style.png)
 
+##### 设置debug当前行的颜色
+
+window >> preferences >> general >> editors >> text editors >> annotations >> debug current instruction pointer
+
+RGB		45	96	153
+
 #### 指定语言的代码样式（以Java为例）
 
 Windows >> Preferences  >> Java >> Editor >> Syntax Coloring 
