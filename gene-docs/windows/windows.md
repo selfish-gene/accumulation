@@ -24,6 +24,8 @@ win D			跳转至桌面
 
 win L			锁定计算机
 
+win pause		系统
+
 win R			打开cmd命令窗口
 
 ### 三键
