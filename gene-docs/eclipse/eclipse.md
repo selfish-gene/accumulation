@@ -34,7 +34,9 @@ ctrl W			关闭当前文件
 
 ### 三键
 
-alt shift s			source
+alt shift S			source
+
+alt shift Z			选中的代码块surround with
 
 ctrl 2 L			定义匿名变量
 

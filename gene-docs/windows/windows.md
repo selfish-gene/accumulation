@@ -18,6 +18,8 @@ ctrl W			关闭当前文件窗口
 
 ctrl X			剪切
 
+crtl N			复制当前文件窗口
+
 win E			打开文件系统
 
 win D			跳转至桌面
