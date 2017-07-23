@@ -81,7 +81,7 @@ git push [remoteName] [localBranchName]				推送到远程仓库
     git submodule foreach "git command"                 递归给子模块执行git command命令
 ## git常见的设置
 
-### git存储用户名与密码
+### 存储用户名与密码
 
 .gitconfig 文件中添加 
 
@@ -95,3 +95,5 @@ git push [remoteName] [localBranchName]				推送到远程仓库
 ```
 git config --global credential.helper store
 ```
+
+### 配置提交模板
