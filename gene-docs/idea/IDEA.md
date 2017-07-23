@@ -6,7 +6,7 @@
 
 快速掌握快捷键的方式：**每个选项后面都有快捷键方式**，多使用即可，如下图：
 
-![short-cut](D:\git\typora\idea\pictures\short-cut.png)
+![short-cut](D:\git\accumulation\gene-docs\idea\pictures\short-cut.png)
 
 ### 单键
 
@@ -58,6 +58,10 @@ ctrl alt O				setting
 
 ctrl alt T				包围代码块
 
+ctrl alt left/right			previous/next occurrence
+
+ctrl shift A			View视图查询
+
 ctrl shift C			复制文件路径
 
 ctrl shift F			全局查找文本
@@ -90,29 +94,29 @@ shift F8				跳出方法
 
 File	>>	setting	(ctrl alt s)
 
-![jdk-3](D:\git\typora\idea\pictures\jdk-3.png)
+![jdk-3](D:\git\accumulation\gene-docs\idea\pictures\jdk-3.png)
 
 File	>>	Project Structure	(ctrl shift alt s)	
 
-![jdk-1](D:\git\typora\idea\pictures\jdk-1.png)
+![jdk-1](D:\git\accumulation\gene-docs\idea\pictures\jdk-1.png)
 
-![jdk-2](D:\git\typora\idea\pictures\jdk-2.png)
+![jdk-2](D:\git\accumulation\gene-docs\idea\pictures\jdk-2.png)
 
 ### 显示文件最大数量的限制
 
-![file-limit](D:\git\typora\idea\pictures\file-limit.png)
+![file-limit](D:\git\accumulation\gene-docs\idea\pictures\file-limit.png)
 
 ### 导航栏多行显示
 
-![tab](D:\git\typora\idea\pictures\tab.png)
+![tab](D:\git\accumulation\gene-docs\idea\pictures\tab.png)
 
 ### 创建自定义代码模板
 
-![codeBlock](D:\git\typora\idea\pictures\codeBlock.png)
+![codeBlock](D:\git\accumulation\gene-docs\idea\pictures\codeBlock.png)
 
 ### 设置import同一个包类的数量达到上限时用*
 
-![import](D:\git\typora\idea\pictures\import.png)
+![import](D:\git\accumulation\gene-docs\idea\pictures\import.png)
 
 ## 插件
 
@@ -122,11 +126,11 @@ File	>>	Project Structure	(ctrl shift alt s)
 
 **将下载的插件解压后，手动复制该文件到idea的安装目录下的plugins文件夹**
 
-![plugins-1](D:\git\typora\idea\pictures\plugins-1.png)
+![plugins-1](D:\git\accumulation\gene-docs\idea\pictures\plugins-1.png)
 
 **在idea中安装，File	>>	setting	>>	plugins，如下图：**
 
-![plugins-2](D:\git\typora\idea\pictures\plugins-2.png)
+![plugins-2](D:\git\accumulation\gene-docs\idea\pictures\plugins-2.png)
 
 ### 常用插件列表
 
@@ -150,7 +154,7 @@ File	>>	Project Structure	(ctrl shift alt s)
 
 ### 用idea自带编译器编译
 
-#### ![compile](D:\git\typora\idea\pictures\compile.png)
+#### ![compile](D:\git\accumulation\gene-docs\idea\pictures\compile.png)
 
 ​
 
